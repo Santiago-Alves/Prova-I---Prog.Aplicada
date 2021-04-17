@@ -3,12 +3,22 @@
 using namespace std;
 
 int main() {
+  string opção;
   string entrada, auxiliar;
+  int j = 0;
+  int soma = 1;
+  int cont = 0;
 
-  cout << "texto: ";
+cout << "Digite C(Codificar) ou D(Decodificar): ";
+cin >> opção;
+
+if(opção == "C"){
+
+  cout << "Digite um texto: ";
   cin >> entrada;
-int cont = 0;
-  for (int i =0; i < 20; i++) {
+
+  if(size(entrada) > 0  &&  size(entrada) < 1000){
+  for (int i =0; i < size(entrada); i++) {
 
     if (entrada[i] == 'Z') {
               auxiliar[cont] = 'Z';
@@ -81,7 +91,30 @@ int cont = 0;
               }
                          
 }
+}else{
+  cout<< "texto nao reconhecido";
+}
+}else{
+  if(opção == "D"){
+
+    cout << "Digite um texto: ";
+    cin >> entrada;
+  
+  if(size(entrada) > 0  &&  size(entrada) < 1000){
+    
+
+  }else{
+    cout << "texto nao reconhecido";
+  }
+
+  }else{
+    if (opção != "C" || "D"){
+        cout << "opção nao existe";
+    }
+  }
+}
+
 for(int i = 0; i < cont; i++){
- if(auxiliar )
+  cout << auxiliar[i];
 }
 }
